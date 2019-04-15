@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from "electron";
-import { ipcMain } from "electron";
+import windowFunc from './window';
 
 /**
  * Set `__static` path to static files in production
@@ -27,7 +27,7 @@ function createWindow() {
     height: 670,
     minWidth: 750,
     minHeight: 500,
-    frame: true
+    frame: false
   });
 
   mainWindow.loadURL(winURL);
@@ -35,6 +35,8 @@ function createWindow() {
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
+
+  windowFunc(mainWindow);
 }
 
 app.on("ready", createWindow);
