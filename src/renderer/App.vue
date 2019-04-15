@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <div id="sidebar">123</div>
-    <div id="list">123</div>
+    <div id="sidebarWrapper">
+      <v-sidebar />
+    </div>
+    <div id="listWrapper">123</div>
     <div id="contentWrapper">
       <router-view></router-view>
     </div>
@@ -9,8 +11,12 @@
 </template>
 
 <script>
+import Sidebar from '@/containers/Sidebar/Sidebar';
 export default {
-  name: "elec-z"
+  name: "elec-z",
+  components: {
+    'v-sidebar': Sidebar
+  }
 };
 </script>
 
@@ -28,8 +34,8 @@ body,
   overflow: hidden;
   position: relative;
 }
-#sidebar {
-  width: 50px;
+#sidebarWrapper {
+  width: 60px;
   height: 100%;
   background: orange;
   position: absolute;
@@ -37,20 +43,20 @@ body,
   left: 0;
   bottom: 0;
 }
-#list {
-  width: 200px;
+#listWrapper {
+  width: 250px;
   height: 100%;
   background: pink;
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 60px;
   bottom: 0;
 }
 #contentWrapper {
   flex: 1;
   position: absolute;
   top: 0;
-  left: 250px;
+  left: 310px;
   right: 0;
   bottom: 0;
 }
