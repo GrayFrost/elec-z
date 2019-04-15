@@ -1,17 +1,22 @@
 <template>
   <div id="sidebar">
     <div class="top">
-      <div>头</div>
-      <div>
-          <router-link to="/file">文件</router-link>
-      </div>
+      <v-avatar />
+      <v-nav />
     </div>
     <div class="bottom">bot</div>
   </div>
 </template>
 
 <script>
-export default {};
+import Avatar from "@/components/Avatar/Avatar";
+import Nav from "@/components/Nav/Nav";
+export default {
+  components: {
+    "v-avatar": Avatar,
+    "v-nav": Nav
+  }
+};
 </script>
 
 <style>
@@ -21,6 +26,8 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
 }
 </style>
 

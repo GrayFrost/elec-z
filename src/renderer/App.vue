@@ -30,7 +30,7 @@ $center-list-width: 250px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
 }
 html,
 body,
@@ -58,7 +58,6 @@ body,
   bottom: 0;
 }
 #contentWrapper {
-  flex: 1;
   position: absolute;
   top: 0;
   left: $sidebar-width + $center-list-width;
