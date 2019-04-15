@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from "electron";
-import { ipcMain } from "electron";
+import windowFunc from './window';
 
 /**
  * Set `__static` path to static files in production
@@ -36,22 +36,7 @@ function createWindow() {
     mainWindow = null;
   });
 
-  //自定义关闭窗口
-  ipcMain.on('closeWindow', ()=>{
-    app.quit();
-  });
-
-  ipcMain.on('maxWindow', ()=>{
-    mainWindow.maximize();
-  });
-
-  ipcMain.on('normalWindow', ()=>{
-    mainWindow.unmaximize();
-  });
-
-  ipcMain.on('hideWindow', ()=>{
-    mainWindow.minimize();
-  });
+  windowFunc(mainWindow);
 }
 
 app.on("ready", createWindow);

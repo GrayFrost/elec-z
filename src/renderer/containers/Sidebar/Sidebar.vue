@@ -2,7 +2,9 @@
   <div id="sidebar">
     <div class="top">
       <div>头</div>
-      <div>nav</div>
+      <div>
+          <router-link to="/file">文件</router-link>
+      </div>
     </div>
     <div class="bottom">bot</div>
   </div>
