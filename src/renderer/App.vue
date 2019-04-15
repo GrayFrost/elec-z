@@ -5,6 +5,7 @@
     </div>
     <div id="listWrapper">123</div>
     <div id="contentWrapper">
+      <v-button-group />
       <router-view></router-view>
     </div>
   </div>
@@ -12,10 +13,12 @@
 
 <script>
 import Sidebar from '@/containers/Sidebar/Sidebar';
+import ButtonGroup from '@/components/ButtonGroup/ButtonGroup';
 export default {
   name: "elec-z",
   components: {
-    'v-sidebar': Sidebar
+    'v-sidebar': Sidebar,
+    'v-button-group': ButtonGroup
   }
 };
 </script>
@@ -37,7 +40,7 @@ body,
 #sidebarWrapper {
   width: 60px;
   height: 100%;
-  background: orange;
+  background: #25282d;
   position: absolute;
   top: 0;
   left: 0;
@@ -46,7 +49,7 @@ body,
 #listWrapper {
   width: 250px;
   height: 100%;
-  background: pink;
+  background: #e9e7e8;
   position: absolute;
   top: 0;
   left: 60px;

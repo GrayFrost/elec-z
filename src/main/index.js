@@ -27,13 +27,30 @@ function createWindow() {
     height: 670,
     minWidth: 750,
     minHeight: 500,
-    frame: true
+    frame: false
   });
 
   mainWindow.loadURL(winURL);
 
   mainWindow.on("closed", () => {
     mainWindow = null;
+  });
+
+  //自定义关闭窗口
+  ipcMain.on('closeWindow', ()=>{
+    app.quit();
+  });
+
+  ipcMain.on('maxWindow', ()=>{
+    mainWindow.maximize();
+  });
+
+  ipcMain.on('normalWindow', ()=>{
+    mainWindow.unmaximize();
+  });
+
+  ipcMain.on('hideWindow', ()=>{
+    mainWindow.minimize();
   });
 }
 

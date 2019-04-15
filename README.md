@@ -10,6 +10,10 @@ mainWindow = new BrowserWindow({
   height: 670,
   minWidth: 750,
   minHeight: 500,
-  frame: false // 应用自带的框，去掉后，没有导航栏和关闭按钮
+  frame: true // 应用自带的框，设置false去掉后，没有导航栏和关闭按钮
 });
 ```
+疑问：在#app里设置flex样式一直不生效，目前只能先用position来调整布局？
+
+# 第二部
+隐藏自带边框，因此我们需要先添加关闭程序按钮。
