@@ -35,6 +35,10 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
+  -webkit-app-region: drag;
+}
+button {
+  -webkit-app-region: no-drag;
 }
 </style>
 

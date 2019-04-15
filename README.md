@@ -58,3 +58,8 @@ function createWindow() {
   });
 }
 ```
+
+去掉自带边框后带来的另一个问题是无法拖动，因此我们需要给使用到拖动的 dom 添加样式`-webkit-app-region: drag`，将其设置为拖动区域。  
+设置这个样式之后，会发现在该区域的一些功能失常，通常是点击事件失效，此时我们在需要使用点击元素的 dom 元素上设置`-webkit-app-region:no-drag`。
+
+TODO: 将可拖动的元素统一样式处理，避免重复写`-webkit-app-region: drag`
