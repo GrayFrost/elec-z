@@ -2,6 +2,7 @@
   <div id="buttonGroup">
     <button @click="closeWindow">关闭</button>
     <button @click="maxWindow">大小</button>
+    <button @click="hideWindow">隐藏</button>
   </div>
 </template>
 
@@ -24,6 +25,9 @@ export default {
         this.$electron.ipcRenderer.send("normalWindow");
         this.isNormal = true;
       }
+    },
+    hideWindow() {
+      this.$electron.ipcRenderer.send("hideWindow");
     }
   }
 };

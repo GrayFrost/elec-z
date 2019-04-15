@@ -23,7 +23,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+$sidebar-width: 60px;
+$center-list-width: 250px;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,7 +40,7 @@ body,
   position: relative;
 }
 #sidebarWrapper {
-  width: 60px;
+  width: $sidebar-width;
   height: 100%;
   background: #25282d;
   position: absolute;
@@ -47,19 +49,19 @@ body,
   bottom: 0;
 }
 #listWrapper {
-  width: 250px;
+  width: $center-list-width;
   height: 100%;
   background: #e9e7e8;
   position: absolute;
   top: 0;
-  left: 60px;
+  left: $sidebar-width;
   bottom: 0;
 }
 #contentWrapper {
   flex: 1;
   position: absolute;
   top: 0;
-  left: 310px;
+  left: $sidebar-width + $center-list-width;
   right: 0;
   bottom: 0;
 }
