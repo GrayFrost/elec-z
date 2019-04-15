@@ -3,7 +3,9 @@
     <div id="sidebarWrapper">
       <v-sidebar />
     </div>
-    <div id="listWrapper">123</div>
+    <div id="listWrapper">
+      <v-list :lists="lists" />
+    </div>
     <div id="contentWrapper">
       <v-button-group />
       <router-view></router-view>
@@ -13,11 +15,18 @@
 
 <script>
 import Sidebar from '@/containers/Sidebar/Sidebar';
+import List from '@/components/List/List';
 import ButtonGroup from '@/components/ButtonGroup/ButtonGroup';
 export default {
   name: "elec-z",
+  data(){
+    return {
+      lists: []
+    }
+  },
   components: {
     'v-sidebar': Sidebar,
+    'v-list': List,
     'v-button-group': ButtonGroup
   }
 };
