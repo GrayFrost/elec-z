@@ -67,6 +67,15 @@ TODO: 将可拖动的元素统一样式处理，避免重复写`-webkit-app-regi
 # File
 
 ## 点击上传
+监听`change`。
+```html
+<input type="file" name="upload" id="file" @change="changeFile">
+```
+```js
+changeFile({ target: { files } }) {
+  console.log(files);
+}
+```
 
 ## 拖拽上传
 
