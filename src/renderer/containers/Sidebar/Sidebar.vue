@@ -21,6 +21,7 @@ export default {
 
 <style>
 #sidebar {
+  box-sizing: border-box;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -32,10 +33,10 @@ export default {
   width: 100%;
   text-align: center;
 }
-.top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
 
