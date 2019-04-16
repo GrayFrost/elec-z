@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
 $sidebar-width: 60px;
 * {
-  box-sizing: border-box;
+  // box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;

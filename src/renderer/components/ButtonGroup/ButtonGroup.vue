@@ -40,6 +40,7 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   -webkit-app-region: drag;
+  border-bottom: 1px solid #eee;
 }
 button {
   -webkit-app-region: no-drag;

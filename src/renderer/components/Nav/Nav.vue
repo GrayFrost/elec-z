@@ -11,8 +11,8 @@ export default {};
 </script>
 
 <style>
-#nav{
-    margin: 10px 0;
+#nav {
+  margin: 10px 0;
 }
 .link {
   display: block;

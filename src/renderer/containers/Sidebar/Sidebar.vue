@@ -1,8 +1,8 @@
 <template>
   <div id="sidebar">
     <div class="top">
-      <v-avatar />
-      <v-nav />
+      <v-avatar/>
+      <v-nav/>
     </div>
     <div class="bottom">bot</div>
   </div>
@@ -21,13 +21,21 @@ export default {
 
 <style>
 #sidebar {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   padding: 5px 0;
+}
+.top,
+.bottom {
+  width: 100%;
+  text-align: center;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 </style>
 
