@@ -1,6 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/file" class="link">文件</router-link>
+    <router-link to="/play" class="link">音视</router-link>
+    <router-link to="/chat" class="link">socket</router-link>
   </div>
 </template>
 
