@@ -1,8 +1,8 @@
 <template>
   <div id="buttonGroup">
-    <el-button @click="closeWindow">关闭</el-button>
-    <el-button @click="maxWindow">大小</el-button>
     <el-button @click="hideWindow">隐藏</el-button>
+    <el-button @click="maxWindow">大小</el-button>
+    <el-button @click="closeWindow"><i class="el-icon-close"></i></el-button>
   </div>
 </template>
 
@@ -35,10 +35,10 @@ export default {
 
 <style>
 #buttonGroup {
-  height: 30px;
+  /* height: 30px; */
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
+  /* display: flex;
+  flex-direction: row-reverse; */
   -webkit-app-region: drag;
   border-bottom: 1px solid #eee;
 }
