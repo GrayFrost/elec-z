@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <div id="sidebarWrapper">
+    <v-button-group />
+    <div>
+      <h2>内容</h2>
+      <p>决定做一个markdown转换的小项目</p>
+    </div>
+    <!-- <div id="sidebarWrapper">
       <v-sidebar />
     </div>
     <div id="contentWrapper">
-      <v-button-group />
       <router-view></router-view>
-    </div>
+    </div> -->
   </div>
 </template>
 
