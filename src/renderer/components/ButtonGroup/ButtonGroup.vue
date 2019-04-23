@@ -35,10 +35,7 @@ export default {
 
 <style>
 #buttonGroup {
-  /* height: 30px; */
   width: 100%;
-  /* display: flex;
-  flex-direction: row-reverse; */
   -webkit-app-region: drag;
   border-bottom: 1px solid #eee;
 }
