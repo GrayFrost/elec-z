@@ -1,5 +1,5 @@
-import { app, BrowserWindow } from "electron";
-import windowFunc from './window';
+import { app, BrowserWindow, dialog, ipcMain } from "electron";
+import windowFunc from "./window";
 
 /**
  * Set `__static` path to static files in production
@@ -37,6 +37,11 @@ function createWindow() {
   });
 
   windowFunc(mainWindow);
+  ipcMain.on("select-file", () => {
+    dialog.showOpenDialog({ properties: ["openFile"] }, files => {
+      console.log("select files", files);
+    });
+  });
 }
 
 app.on("ready", createWindow);
