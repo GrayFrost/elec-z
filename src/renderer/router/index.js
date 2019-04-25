@@ -14,11 +14,6 @@ export default new Router({
       component: HomePage
     },
     {
-      path: '/file',
-      name: 'file-page',
-      component: FilePage
-    },
-    {
       path: '*',
       redirect: '/'
     }

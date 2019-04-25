@@ -1,8 +1,8 @@
 <template>
   <div id="buttonGroup">
-    <el-button @click="hideWindow">隐藏</el-button>
-    <el-button @click="maxWindow">大小</el-button>
-    <el-button @click="closeWindow"><i class="el-icon-close"></i></el-button>
+    <el-button size="small" @click="hideWindow">隐藏</el-button>
+    <el-button size="small" @click="maxWindow">大小</el-button>
+    <el-button size="small" @click="closeWindow"><i class="el-icon-close"></i></el-button>
   </div>
 </template>
 
